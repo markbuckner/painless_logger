@@ -1,0 +1,38 @@
+
+version: 1
+
+formatters:
+  simple:
+    format: "%(asctime)s.%(msecs)03d\t%(levelname)s\t%(message)s"
+    datefmt: '%m/%d/%Y %H:%M:%S'
+
+  complex:
+    format: "%(asctime)s.%(msecs)03d %(module)s.%(funcName)s() line-%(lineno)s %(threadName)s\t%(levelname)s\t%(message)s"
+    datefmt: '%m/%d/%Y %H:%M:%S'
+
+# Set loggers.
+loggers:
+  console:   
+    level: DEBUG
+    handlers: [console]
+
+  file:
+    level: DEBUG
+    handlers: [file]
+
+# Set logger handlers.
+handlers:
+  console:
+    class: logging.StreamHandler
+    stream: ext://sys.stdout
+    level: DEBUG
+    formatter: complex
+
+  file:
+    class: logging.FileHandler
+    level: DEBUG
+    formatter: complex
+    # Use full file path for "filename".
+    # If no path is provided, the log file gets placed in the program's working directory.
+    filename: "DefaultLog.log"
+               
