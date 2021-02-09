@@ -1,4 +1,4 @@
-# painless_logger
+# Painless Logger for Python
  
 A painless logging module for Python. 
 
