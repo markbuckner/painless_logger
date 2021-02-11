@@ -1,16 +1,10 @@
 # Demo of how to import and use the logger.
 
-# Import all the available log message functions.
-
-# Console log message functions.
-from painless_logger.messages import INFO
-from painless_logger.messages import WARNING
-from painless_logger.messages import ERROR
-
-# File log message functions.
-from painless_logger.messages import INFO_FILE
-from painless_logger.messages import WARNING_FILE
-from painless_logger.messages import ERROR_FILE
+# Import all the available log message functions and assign them names.
+from painless_logger.messages import console
+INFO, WARNING, ERROR = console
+from painless_logger.messages import file
+INFO_FILE, WARNING_FILE, ERROR_FILE = file
 
 
 def main():

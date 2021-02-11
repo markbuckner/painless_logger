@@ -114,6 +114,8 @@ WARNING = _PainlessLogger.console_logger.warning
 # Error log message function
 ERROR = _PainlessLogger.console_logger.exception
 
+console = INFO, WARNING, ERROR
+
 # Info file log message function.
 INFO_FILE = _PainlessLogger.file_logger.info
 
@@ -122,3 +124,5 @@ WARNING_FILE = _PainlessLogger.file_logger.warning
 
 # Error file log message function.
 ERROR_FILE = _PainlessLogger.file_logger.exception
+
+file = INFO, WARNING, ERROR
