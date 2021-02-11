@@ -10,17 +10,12 @@ Good primarily for debugging by default, but can be extended through the logging
 # Usage
 
 ```python
-# Import all the default available log message functions.
+# Import all the available log message functions and assign them names.
+from painless_logger.messages import console
+INFO, WARNING, ERROR = console
+from painless_logger.messages import file
+INFO_FILE, WARNING_FILE, ERROR_FILE = file
 
-# Console log message functions.
-from painless_logger.messages import INFO
-from painless_logger.messages import WARNING
-from painless_logger.messages import ERROR
-
-# File log message functions.
-from painless_logger.messages import INFO_FILE
-from painless_logger.messages import WARNING_FILE
-from painless_logger.messages import ERROR_FILE
 
 # No additional set up or logger initialization necessary :)
 
@@ -31,7 +26,6 @@ WARNING_FILE("This logs a warning message to file.")
 try:
     1/0
 except:
-    ERROR("This logs an error message. Use the error message in except blocks, and a traceback will be added automatically to the message.")
-
+    ERROR("This logs an error message. Use in except blocks, and a traceback will be added automatically.")
 
 ```
