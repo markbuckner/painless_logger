@@ -1,8 +1,6 @@
 # Painless Logger for Python
  
-A painless logging module for Python. 
-
-Ready to log to console and file after just import statements. No initialization or additional scaffolding code required. 
+A painless logging module for Python that enables logging to console and/or file.
 
 Good primarily for debugging by default, but can be extended through the logging-config.yaml file for other use cases.
 
